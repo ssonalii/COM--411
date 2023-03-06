@@ -1,0 +1,51 @@
+Q.   Example of constructor - destructor
+#include<iostream>
+using namespace std;
+class stu
+{
+    private:
+    char name[20],add[20];
+    int roll,zip;
+    public:
+    stu(); // constructor
+    ~stu(); // destructor
+    void read();  // declaration of member function for user input
+    void disp1();    // declaration of member function for displaying details
+};  // class ends here
+stu::stu()   // constructor definition
+{
+    cout<<"\nThis is student details constructor called..."<<endl;
+}
+void stu::read()   // member function definition outside the class
+{
+    cout<<"\n Enter the student Name::";
+    cin>>name;
+    cout<<"\nEnter the student roll::";
+    cin>>roll;
+    cout<<"\nEnter the Student address::";
+    cin>>add;
+    cout<<"\nEnter the zipcode::";
+    cin>>zip;
+}
+void stu::disp1()   // member function definition outside the class
+{
+    cout<<"\nThe entered student details are shown below::.......\n";
+    fflush(stdin);
+    cout<<"\nStudent Name::"<<name<<endl;
+    cout<<"\nRoll no is::"<<roll<<endl;
+    cout<<"\nAddress is::"<<add<<endl;
+    cout<<"\nZipcode is::"<<zip;
+}
+
+stu::~stu()     // destructive definition
+{
+    cout<<"\n\nStudent details is closed.........\n";
+}
+int main()
+{
+    stu s;
+    s.read();
+    s.disp1();
+    return 0;
+
+}

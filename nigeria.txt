@@ -1,0 +1,78 @@
+Write a program which creates and uses array of object of class.
+// C++ program to implement
+// the above approach
+#include<iostream>
+using namespace std;
+
+class Employee
+{
+int id;
+char name[30];
+public:
+void getdata();//Declaration of function
+void putdata();//Declaration of function
+};
+void Employee::getdata(){//Defining of function
+cout<<"Enter Id : ";
+cin>>id;
+cout<<"Enter Name : ";
+cin>>name;
+}
+void Employee::putdata(){//Defining of function
+cout<<id<<" ";
+cout<<name<<" ";
+cout<<endl;
+}
+int main(){
+Employee emp; //One member
+emp.getdata();//Accessing the function
+emp.putdata();//Accessing the function
+return 0;
+
+}
+write a program that allows the user to enter the information of 3 employees.
+#include<iostream>
+ using namespace std;
+ class Employee
+ {
+     private:
+         int empid;
+         char empname[20];
+         int bsalary;
+         int allowance;
+     public:
+         Employee()
+         {
+             bsalary = 1000;
+         }
+         void GetData();
+         void DispData();
+ };
+ void Employee::GetData()
+ {
+     cout<<"Enter the employee id: ";
+     cin>>empid;
+     cout<<"Enter the employee name: ";
+     cin>>empname;
+     cout<<"Enter the employee allowace: ";
+     cin>>allowance;
+ }
+ void Employee::DispData()
+ {
+     cout<<endl<<empid<<"\t"<<empname<<"\t"<<bsalary<<"\t"<<allowance;
+ }
+ int main()
+ {
+     Employee e[3];
+     cout<<"Enter the employee information:"<<endl;
+     for(int i=0;i<3;i++)
+     {
+         e[i].GetData();
+     }
+     cout<<endl<<"The employee information is:";
+     cout<<endl<<"EmpID \t Name \t Bsalary \t Allowance";
+     for(int i=0; i<3;i++)
+     {
+         e[i].DispData();
+     }
+ }
